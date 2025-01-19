@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-U6pRJgK1gaXieF74K69oZgbZnLEtaHqQ3l3uT8+QlHWDqQu4YvABdoThy/HPTvQ/" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .iphone-frame {
+            position: relative;
+            width: 375px; /* Ancho del iPhone */
+            height: 812px; /* Alto del iPhone */
+            margin: 50px auto;
+            background-color: #f0f8ff;
+            border: 2px solid black;
+            border-radius: 40px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .iphone-content {
+            padding: 20px;
+            height: calc(100% - 100px); /* Altura del contenido dentro del iPhone */
+            /*overflow-y: auto;*/ /* Permitir desplazamiento vertical */
+        }
+
+        .map-container {
+            height: 400px; /* Altura del mapa */
+            margin-bottom: 20px; /* Espacio entre el mapa y los lugares cercanos */
+        }
+
+        .places-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px; /* Altura máxima del contenedor */
+            overflow-y: auto; /* Permitir desplazamiento vertical */
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .place {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            text-align: left;
+        }
+
+        .place-name {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .place-info {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .place b {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="iphone-frame">
+        <div class="iphone-content">
+            <div class="container">
+                <div class="map-container">
+                    <div id="map" style="height: 100%;"></div>
+                </div>
+                <div class="places-container">
+                    <h2>Lugares Cercanos</h2>
+                    <!-- Aquí se mostrarán los lugares cercanos -->
+                    <div id="places"></div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Agrega la biblioteca Leaflet.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+
+    <!-- Agrega un archivo JavaScript para configurar el mapa -->
+    <script src="/static/script.js"></script>
+
+    <!-- Agrega un elemento para mostrar las coordenadas -->
+    <div id="ubicacion"></div>
+</body>
+</html>
+
+
+
+
+
